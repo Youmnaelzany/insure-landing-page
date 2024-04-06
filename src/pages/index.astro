@@ -10,7 +10,7 @@ import "@/styles/globals.css";
     <a href="/" class=""
       ><img src="/public/images/logo.svg" alt="logo" class="" /></a
     >
-    <nav class="hidden gap-8 md:block">
+    <nav class="hidden gap-8 md:flex">
       <ul class="flex items-center justify-between gap-[1.62rem]" id="myLinks">
         <li class="">
           <a
@@ -52,40 +52,51 @@ import "@/styles/globals.css";
     >
   </header>
   <main>
-    <section class="bg-[#2D2641]">
+    <section
+      class="relative flex flex-col bg-[#2D2641] md:max-2xl:h-[37.5rem]
+      md:max-2xl:flex-row-reverse md:max-2xl:items-center md:max-2xl:justify-between md:max-2xl:overflow-visible md:max-2xl:px-[10.31rem]"
+    >
       <div class="">
         <picture>
           <source
-            media="(768px)"
+            media="(1024px)"
             srcset="/public/images/image-intro-desktop.jpg"
           />
-          <img src="/public/images/image-intro-mobile.jpg" alt="" class="" />
+          <img
+            src="/public/images/image-intro-mobile.jpg"
+            alt=""
+            class="md:max-2xl:relative md:max-2xl:top-0"
+          />
         </picture>
       </div>
-      <div class="">
+      <div class="relative">
         <!-- Intro Left Pattern -->
         <picture>
-          <source
+          <sourcev
             media="(min-width:768px )"
-            srcset="/public/images/bg-pattern-intro-left-desktop.svg"
-          />
+            srcset="/public/images/bg-pattern-intro-left-desktop.svg"></sourcev>
           <img
             src="/public/images/bg-pattern-intro-left-mobile.svg"
             alt=""
-            class=""
+            class="absolute left-0 top-0 md:max-2xl:-left-[10.125rem] md:max-2xl:top-[19.688rem]"
           />
         </picture>
         <!-- Intro Text -->
-        <div class="px-6 py-[5.81rem] text-center text-white">
+        <div
+          class="relative z-50 px-6 py-[5.81rem] text-center
+            text-white md:max-2xl:text-left"
+        >
           <h1
-            class="mb-4 font-DM-Serif-Display text-5xl font-normal leading-[3rem] tracking-[-0.04169rem]"
+            class="mb-4 font-DM-Serif-Display text-5xl font-normal leading-[3rem] tracking-[-0.04169rem] md:max-2xl:w-[33.75rem]"
           >
             Humanizing your insurance.
           </h1>
-          <p class="mb-8 font-Karla text-base font-normal leading-relaxed">
+          <p
+            class="mb-8 font-Karla text-base font-normal leading-relaxed md:max-2xl:w-[33.75rem]"
+          >
             Get your life insurance coverage easier and faster. We blend our
-            expertise and technology to help you find the plan that’s right for
-            you. Ensure you and your loved ones are protected.
+            expertise and technology to help you find the plan that&#39;s right
+            for you. Ensure you and your loved ones are protected.
           </p>
           <button
             type="button"
@@ -102,9 +113,91 @@ import "@/styles/globals.css";
           <img
             src="/public/images/bg-pattern-intro-right-mobile.svg"
             alt=""
-            class=""
+            class="absolute -bottom-44 right-0 md:max-2xl:-right-[44rem] md:max-2xl:-top-[8.563rem]"
           />
         </picture>
+      </div>
+    </section>
+    <section
+      class="mx-6 mb-[8.75rem] mt-[11.31rem] md:mx-[10.31rem] md:mt-[9.88rem]"
+    >
+      <h2
+        class="relative font-DM-Serif-Display text-5xl font-normal leading-[3rem] tracking-[-0.04169rem] text-[#2C2830] before:absolute before:-top-10 before:left-20 before:right-28 before:h-[0.0625rem] before:w-[9.375rem] before:bg-[#C396C6] md:text-[4.5rem] md:leading-[4rem] md:tracking-[-0.0625rem] md:before:-top-[3.94rem] md:before:left-0"
+      >
+        We&#39;re different
+      </h2>
+      <div
+        class="mt-20 flex flex-col gap-14 md:mt-24 md:flex-row md:gap-[1.87rem]"
+      >
+        <!-- Snappy Process -->
+        <div
+          class="flex flex-col items-center gap-4 text-center md:items-start md:text-left"
+        >
+          <div class="">
+            <img
+              src="/public/images/icon-snappy-process.svg"
+              alt="icon-snappy-process"
+              class="mb-4"
+            />
+          </div>
+          <h2
+            class="font-DM-Serif-Display text-[1.75rem] font-normal leading-normal tracking-[-0.02431rem] text-[#2C2830]"
+          >
+            Snappy Process
+          </h2>
+          <p
+            class="font-Karla text-base font-normal leading-relaxed text-[#837D88]"
+          >
+            Our application process can be completed in minutes, not hours.
+            Don&#39;t get stuck filling in tedious forms.
+          </p>
+        </div>
+        <!-- Affordable Prices -->
+        <div
+          class="flex flex-col items-center gap-4 text-center md:items-start md:text-left"
+        >
+          <div class="">
+            <img
+              src="/public/images/icon-affordable-prices.svg"
+              alt="icon-snappy-process"
+              class="mb-4"
+            />
+          </div>
+          <h2
+            class="font-DM-Serif-Display text-[1.75rem] font-normal leading-normal tracking-[-0.02431rem] text-[#2C2830]"
+          >
+            Affordable Prices
+          </h2>
+          <p
+            class="font-Karla text-base font-normal leading-relaxed text-[#837D88]"
+          >
+            We don&#39;t want you worrying about high monthly costs. Our prices
+            may be low, but we still offer the best coverage possible.
+          </p>
+        </div>
+        <!-- People First -->
+        <div
+          class="flex flex-col items-center gap-4 text-center md:items-start md:text-left"
+        >
+          <div class="">
+            <img
+              src="/public/images/icon-people-first.svg"
+              alt="icon-snappy-process"
+              class="mb-4"
+            />
+          </div>
+          <h2
+            class="font-DM-Serif-Display text-[1.75rem] font-normal leading-normal tracking-[-0.02431rem] text-[#2C2830]"
+          >
+            People First
+          </h2>
+          <p
+            class="font-Karla text-base font-normal leading-relaxed text-[#837D88]"
+          >
+            Our plans aren&#39;t full of conditions and clauses to prevent
+            payouts. We make sure you&#39;re covered when you need it.
+          </p>
+        </div>
       </div>
     </section>
   </main>
