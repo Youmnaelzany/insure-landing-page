@@ -1,0 +1,124 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "@/styles/globals.css";
+---
+
+<Layout title="Frontend Mentor | Insure landing page">
+  <header
+    class="m-6 flex items-center justify-between md:max-2xl:mb-[1.19rem] md:max-2xl:ml-[10.5rem] md:max-2xl:mr-[10.31rem] md:max-2xl:mt-[1.31rem]"
+  >
+    <a href="/" class=""
+      ><img src="/public/images/logo.svg" alt="logo" class="" /></a
+    >
+    <nav class="hidden gap-8 md:block">
+      <ul class="flex items-center justify-between gap-[1.62rem]" id="myLinks">
+        <li class="">
+          <a
+            href="/"
+            class="font-Karla text-sm font-bold uppercase leading-normal tracking-[0.09375rem] text-[#837D88] transition-colors duration-500 ease-linear hover:text-[#2C2830]"
+            >How we work</a
+          >
+        </li>
+        <li class="">
+          <a
+            href="/"
+            class="font-Karla text-sm font-bold uppercase leading-normal tracking-[0.09375rem] text-[#837D88] transition-colors duration-500 ease-linear hover:text-[#2C2830]"
+            >Blog</a
+          >
+        </li>
+        <li class="">
+          <a
+            href="/"
+            class="font-Karla text-sm font-bold uppercase leading-normal tracking-[0.09375rem] text-[#837D88] transition-colors duration-500 ease-linear hover:text-[#2C2830]"
+            >Account</a
+          >
+        </li>
+      </ul>
+      <button
+        type="button"
+        class="h-10 w-[9.125rem] border-[1.5px] border-solid border-[#2C2830] font-Karla text-sm font-bold uppercase leading-normal tracking-[0.09375rem] text-[#2C2830] transition-colors duration-500 ease-linear hover:bg-[#2C2830] hover:text-white"
+        >View plans</button
+      >
+    </nav>
+    <a
+      href="javascript:void(0);"
+      class="md:max-2xl:hidden"
+      onclick="myFunction()"
+      ><img
+        src="/public/images/icon-hamburger.svg"
+        alt="icon-hamburger"
+        class=""
+      /></a
+    >
+  </header>
+  <main>
+    <section class="bg-[#2D2641]">
+      <div class="">
+        <picture>
+          <source
+            media="(768px)"
+            srcset="/public/images/image-intro-desktop.jpg"
+          />
+          <img src="/public/images/image-intro-mobile.jpg" alt="" class="" />
+        </picture>
+      </div>
+      <div class="">
+        <!-- Intro Left Pattern -->
+        <picture>
+          <source
+            media="(min-width:768px )"
+            srcset="/public/images/bg-pattern-intro-left-desktop.svg"
+          />
+          <img
+            src="/public/images/bg-pattern-intro-left-mobile.svg"
+            alt=""
+            class=""
+          />
+        </picture>
+        <!-- Intro Text -->
+        <div class="px-6 py-[5.81rem] text-center text-white">
+          <h1
+            class="mb-4 font-DM-Serif-Display text-5xl font-normal leading-[3rem] tracking-[-0.04169rem]"
+          >
+            Humanizing your insurance.
+          </h1>
+          <p class="mb-8 font-Karla text-base font-normal leading-relaxed">
+            Get your life insurance coverage easier and faster. We blend our
+            expertise and technology to help you find the plan that’s right for
+            you. Ensure you and your loved ones are protected.
+          </p>
+          <button
+            type="button"
+            class="h-10 w-[9.125rem] border-[1.5px] border-solid border-white text-sm font-bold uppercase leading-normal tracking-[0.09375rem] text-white transition-colors duration-500 ease-linear hover:bg-white hover:text-[#2C2830]"
+            >View plans</button
+          >
+        </div>
+        <!-- Intro Right Pattern -->
+        <picture>
+          <source
+            media="(min-width: 768px )"
+            srcset="/public/images/bg-pattern-intro-right-desktop.svg"
+          />
+          <img
+            src="/public/images/bg-pattern-intro-right-mobile.svg"
+            alt=""
+            class=""
+          />
+        </picture>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style></style>
+
+<script is:inline>
+  function myFunction() {
+    let x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+</script>
